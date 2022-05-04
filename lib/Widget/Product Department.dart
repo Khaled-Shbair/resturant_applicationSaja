@@ -51,6 +51,7 @@ final Function () function;
             ),
             Container(
               margin: EdgeInsetsDirectional.zero,
+              padding: EdgeInsetsDirectional.zero,
               decoration: const BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.only(

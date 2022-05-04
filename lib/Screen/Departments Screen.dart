@@ -45,9 +45,7 @@ class _DepartmentScreenState extends State<DepartmentScreen> {
         ),
         child: Column(
           children: [
-            const SizedBox(
-              height:20
-            ),
+            const SizedBox(height: 20),
             TextField(
               keyboardType: TextInputType.visiblePassword,
               obscureText: true,
