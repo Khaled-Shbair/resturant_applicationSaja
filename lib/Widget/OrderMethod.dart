@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 class OrderMethod extends StatelessWidget {
   const OrderMethod({
     required this.title,
+    required this.keyboardType,
     Key? key,
   }) : super(key: key);
   final String title;
+  final TextInputType keyboardType;
 
   @override
   Widget build(BuildContext context) {
@@ -33,11 +35,10 @@ class OrderMethod extends StatelessWidget {
                   color: Colors.black.withAlpha(41)),
             ],
           ),
-          child: const TextField(
-            decoration: InputDecoration(
+          child: TextField(
+            keyboardType: keyboardType,
+            decoration: const InputDecoration(
               border: InputBorder.none,
-              // fillColor: Colors.white,
-              // filled: true,
             ),
           ),
         ),

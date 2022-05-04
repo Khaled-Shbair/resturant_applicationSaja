@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../Widget/TabPageWelcomeScreen.dart';
+import '../../Widget/TabPageWelcomeScreen.dart';
 
 class WelcomeScreen extends StatefulWidget {
   const WelcomeScreen({Key? key}) : super(key: key);

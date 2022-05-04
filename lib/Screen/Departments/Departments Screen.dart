@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../Widget/Product Department.dart';
+import '../../Widget/Product Department.dart';
 
 class DepartmentScreen extends StatefulWidget {
   const DepartmentScreen({Key? key}) : super(key: key);

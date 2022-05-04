@@ -1,8 +1,8 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
-import '../Shared Preferences/SharedPreferences.dart';
-import '../Widget/ButtonLogin.dart';
+import '../../Shared Preferences/SharedPreferences.dart';
+import '../../Widget/ButtonLogin.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);

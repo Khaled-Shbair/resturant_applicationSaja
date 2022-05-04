@@ -1,22 +1,30 @@
 import 'package:flutter/material.dart';
 
-import 'Screen/Departments Screen.dart';
-import 'Screen/Forget Password Screen.dart';
-import 'Screen/Forget Password Sent code.dart';
-import 'Screen/Forget Password change password screen.dart';
+
+import 'Screen/Departments/Departments Screen.dart';
+import 'Screen/Departments/Details Cheese Pizza screen.dart';
+import 'Screen/Departments/Details Chicken Burger screen.dart';
+import 'Screen/Departments/Details Italian Pizza screen.dart';
+import 'Screen/Login/Forget Password Screen.dart';
+import 'Screen/Login/Forget Password Sent code.dart';
+import 'Screen/Login/Forget Password change password screen.dart';
 import 'Screen/Home Screen.dart';
-import 'Screen/Log in Screen.dart';
-import 'Screen/Order Chicken Burger Screen.dart';
-import 'Screen/Sign up Screen.dart';
-import 'Screen/lunchWelcomeScreen.dart';
-import 'Screen/Details  Beef Burger screen.dart';
-import 'Screen/Details Cheese Burger screen.dart';
-import 'Screen/Details Cheese Pizza screen.dart';
-import 'Screen/Details Chicken Burger screen.dart';
-import 'Screen/Details Italian Pizza screen.dart';
-import 'Screen/Details Pizza Margherita screen.dart';
-import 'Screen/splash screen.dart';
-import 'Screen/welcome screen.dart';
+import 'Screen/Login/Log in Screen.dart';
+import 'Screen/Orders/Order Beef Burger Screen.dart';
+import 'Screen/Orders/Order Cheese Burger Screen.dart';
+
+import 'Screen/Orders/Order Cheese Pizza Screen.dart';
+import 'Screen/Orders/Order Chicken Burger Screen.dart';
+import 'Screen/Orders/Order Italian Pizza Screen.dart';
+import 'Screen/Orders/Order Pizza Margherita Screen.dart';
+import 'Screen/Login/Sign up Screen.dart';
+import 'Screen/Lunch Screen/lunchWelcomeScreen.dart';
+import 'Screen/Departments/Details  Beef Burger screen.dart';
+import 'Screen/Departments/Details Cheese Burger screen.dart';
+
+import 'Screen/Departments/Details Pizza Margherita screen.dart';
+import 'Screen/Lunch Screen/splash screen.dart';
+import 'Screen/Lunch Screen/welcome screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,7 +37,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: '/OrderChickenBurgerScreen',
+      initialRoute: '/OrderCheeseBurgerScreen',
       routes: {
         '/SplashScreen': (context) => const SplashScreen(),
         '/WelcomeScreen': (context) => const WelcomeScreen(),
@@ -48,6 +56,11 @@ class MyApp extends StatelessWidget {
         '/DetailsCheeseBurgerScreen': (context) => const DetailsCheeseBurgerScreen(),
         '/DetailsPizzaMargheritaScreen': (context) => const DetailsPizzaMargheritaScreen(),
         '/OrderChickenBurgerScreen': (context) => const OrderChickenBurgerScreen(),
+        '/OrderBeefBurgerScreen': (context) => const OrderBeefBurgerScreen(),
+        '/OrderItalianPizzaScreen': (context) => const OrderItalianPizzaScreen(),
+        '/OrderCheesePizzaScreen': (context) => const OrderCheesePizzaScreen(),
+        '/OrderCheeseBurgerScreen': (context) => const OrderCheeseBurgerScreen(),
+        '/OrderPizzaMargheritaScreen': (context) => const OrderPizzaMargheritaScreen(),
       },
     );
   }

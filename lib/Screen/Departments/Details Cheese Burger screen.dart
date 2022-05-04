@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../Widget/Orders.dart';
+import '../../Widget/Orders.dart';
 
 class DetailsCheeseBurgerScreen extends StatefulWidget {
   const DetailsCheeseBurgerScreen({Key? key}) : super(key: key);
