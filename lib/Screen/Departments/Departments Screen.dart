@@ -40,8 +40,8 @@ class _DepartmentScreenState extends State<DepartmentScreen> {
       ),
       body: Padding(
         padding: const EdgeInsetsDirectional.only(
-          start: 15,
-          end: 15,
+          start: 37,
+          end: 37,
         ),
         child: Column(
           children: [
@@ -89,19 +89,21 @@ class _DepartmentScreenState extends State<DepartmentScreen> {
             Expanded(
               child: GridView(
                 padding: const EdgeInsetsDirectional.only(
-                  top: 29,
+                  top: 40,
                 ),
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                   crossAxisSpacing: 29,
-                  childAspectRatio: 162 / 255,
+                  childAspectRatio: 135 / 255,
                 ),
                 children: [
                   Product(
                     image: 'images/purger1.png',
                     title: 'Chicken Burger',
                     price: '\$15',
-                    function: () {},
+                    function: () {
+                      Navigator.pushReplacementNamed(context, '/OrderChickenBurgerScreen');
+                    },
                   ),
                   Product(
                     image: 'images/pngegg (7).png',

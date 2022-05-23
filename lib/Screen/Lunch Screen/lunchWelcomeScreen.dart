@@ -12,8 +12,8 @@ class _LunchWelcomeScreenState extends State<LunchWelcomeScreen> {
   void initState() {
     super.initState();
     Future.delayed(
-      const Duration(seconds: 1),
-      () => Navigator.pushReplacementNamed(context, '/LoginScreen'),
+      const Duration(milliseconds: 300),
+      () => Navigator.pushReplacementNamed(context, '/SignUpScreen'),
     );
   }
 

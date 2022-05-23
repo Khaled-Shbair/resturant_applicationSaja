@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 
+import 'Screen/Bottom.dart';
 import 'Screen/Departments/Departments Screen.dart';
 import 'Screen/Departments/Details Cheese Pizza screen.dart';
 import 'Screen/Departments/Details Chicken Burger screen.dart';
 import 'Screen/Departments/Details Italian Pizza screen.dart';
+import 'Screen/Favorite Screen.dart';
+import 'Screen/Help Screen.dart';
 import 'Screen/Login/Forget Password Screen.dart';
 import 'Screen/Login/Forget Password Sent code.dart';
 import 'Screen/Login/Forget Password change password screen.dart';
@@ -12,7 +16,6 @@ import 'Screen/Home Screen.dart';
 import 'Screen/Login/Log in Screen.dart';
 import 'Screen/Orders/Order Beef Burger Screen.dart';
 import 'Screen/Orders/Order Cheese Burger Screen.dart';
-
 import 'Screen/Orders/Order Cheese Pizza Screen.dart';
 import 'Screen/Orders/Order Chicken Burger Screen.dart';
 import 'Screen/Orders/Order Italian Pizza Screen.dart';
@@ -21,12 +24,15 @@ import 'Screen/Login/Sign up Screen.dart';
 import 'Screen/Lunch Screen/lunchWelcomeScreen.dart';
 import 'Screen/Departments/Details  Beef Burger screen.dart';
 import 'Screen/Departments/Details Cheese Burger screen.dart';
-
 import 'Screen/Departments/Details Pizza Margherita screen.dart';
 import 'Screen/Lunch Screen/splash screen.dart';
 import 'Screen/Lunch Screen/welcome screen.dart';
+import 'Screen/Profile Screen.dart';
+import 'Shared Preferences/SharedPreferences.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await SharedPreferencesController().getInstance();
   runApp(const MyApp());
 }
 
@@ -37,8 +43,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      initialRoute: '/OrderCheeseBurgerScreen',
+      initialRoute: '/MainScreen',
       routes: {
+        '/MainScreen': (context) => const MainScreen(),
         '/SplashScreen': (context) => const SplashScreen(),
         '/WelcomeScreen': (context) => const WelcomeScreen(),
         '/LunchWelcomeScreen': (context) => const LunchWelcomeScreen(),
@@ -61,6 +68,9 @@ class MyApp extends StatelessWidget {
         '/OrderCheesePizzaScreen': (context) => const OrderCheesePizzaScreen(),
         '/OrderCheeseBurgerScreen': (context) => const OrderCheeseBurgerScreen(),
         '/OrderPizzaMargheritaScreen': (context) => const OrderPizzaMargheritaScreen(),
+        '/ProfileScreen': (context) => const ProfileScreen(),
+        '/HelpScreen': (context) => const HelpScreen(),
+        '/FavoriteScreen': (context) => const FavoriteScreen(),
       },
     );
   }
