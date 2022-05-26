@@ -34,8 +34,14 @@ class _DepartmentScreenState extends State<DepartmentScreen> {
             fontWeight: FontWeight.w500,
           ),
         ),
+        leadingWidth: 100,
         actions: [
-          Image.asset('images/profile.png'),
+          IconButton(
+            onPressed: () {},
+            icon: Image.asset('images/profile.png'),
+            iconSize: 100,
+
+          ),
         ],
       ),
       body: Padding(
@@ -102,32 +108,43 @@ class _DepartmentScreenState extends State<DepartmentScreen> {
                     title: 'Chicken Burger',
                     price: '\$15',
                     function: () {
-                      Navigator.pushReplacementNamed(context, '/OrderChickenBurgerScreen');
+                      Navigator.pushNamed(context, '/DetailsChickenBurgerScreen');
                     },
                   ),
                   Product(
                     image: 'images/pngegg (7).png',
                     title: 'Beef  Burger',
                     price: '\$10',
-                    function: () {},
+                    function: () {
+                      Navigator.pushNamed(context, '/DetailsChickenBurgerScreen');
+
+                    },
                   ),
                   Product(
                     image: 'images/pizza1.png',
                     title: 'Italian Pizza',
                     price: '\$5',
-                    function: () {},
+                    function: () {
+                      Navigator.pushNamed(context, '/DetailsChickenBurgerScreen');
+
+                    },
                   ),
                   Product(
                     image: 'images/pizza3.png',
                     title: 'Cheese Pizza',
                     price: '\$20',
-                    function: () {},
+                    function: () {
+                      Navigator.pushNamed(context, '/DetailsChickenBurgerScreen');
+
+                    },
                   ),
                   Product(
                     image: 'images/pngegg3.png',
                     title: 'Cheese Burger',
                     price: '\$25',
-                    function: () {},
+                    function: () {
+                      Navigator.pushNamed(context, '/DetailsChickenBurgerScreen');
+                    },
                   ),
                   Product(
                     image: 'images/pizza2.png',

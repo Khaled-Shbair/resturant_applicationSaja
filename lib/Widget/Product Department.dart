@@ -13,7 +13,8 @@ class Product extends StatelessWidget {
   final String image;
   final String title;
   final String price;
-final Function () function;
+  final Function() function;
+
   @override
   Widget build(BuildContext context) {
     return Align(
@@ -26,12 +27,15 @@ final Function () function;
             Container(
               child: Column(
                 children: [
-                  const SizedBox(height: 15),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      Image.asset('images/heart.png'),
-                      const SizedBox(width: 11),
+                      IconButton(
+                        onPressed: () {},
+                        icon: const Icon(Icons.favorite_border_outlined),
+                        color: const Color(0XFFFF6A0D),
+                        padding: EdgeInsetsDirectional.zero,
+                      ),
                     ],
                   ),
                   Image.asset(

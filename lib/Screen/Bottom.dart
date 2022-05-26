@@ -14,12 +14,12 @@ class MainScreen extends StatefulWidget {
 }
 
 int _currentIndex = 0;
-List<BottomNavigationItem> list = <BottomNavigationItem>[
+final List<BottomNavigationItem> list = <BottomNavigationItem>[
   BottomNavigationItem(widget: const HomeScreen()),
-  BottomNavigationItem(widget: const FavoriteScreen()),
-  BottomNavigationItem(widget: const DepartmentScreen()),
+  BottomNavigationItem(title: 'Favorite',widget: const FavoriteScreen()),
+  BottomNavigationItem(title: 'Sections',widget: const DepartmentScreen()),
   BottomNavigationItem(widget: const ProfileScreen()),
-  BottomNavigationItem(widget: const ProfileScreen()),
+  BottomNavigationItem(title: '',widget: const ProfileScreen()),
 ];
 
 class _MainScreen extends State<MainScreen> {

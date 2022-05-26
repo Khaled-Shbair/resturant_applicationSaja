@@ -18,7 +18,9 @@ class _DetailsCheesePizzaScreenState extends State<DetailsCheesePizzaScreen> {
       details:
           'pizza sauce.\n8 oz. provolone cheese, thinly sliced.\n2 c. shredded low-moisture whole-milk mozzarella cheese.\n6 tbsp. grated parmesan cheese.',
       price: '\$20',
-      function: () {},
+      function: () {
+        Navigator.pushNamed(context, '/OrderCheesePizzaScreen');
+      },
     );
   }
 }

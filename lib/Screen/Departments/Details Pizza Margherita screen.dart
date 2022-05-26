@@ -16,9 +16,13 @@ class _DetailsPizzaMargheritaScreenState
     return Orders(
       image: 'images/pizza big .png',
       mealName: 'Pizza Margherita',
-      details: 'Pizza Margherita (more commonly known in English as Margherita pizza) is a typical Neapolitan pizza, made with San Marzano tomatoes, mozzarella cheese, fresh basil, salt, and extra-virgin olive oil.',
+      details:
+          'Pizza Margherita (more commonly known in English as Margherita pizza) is a typical Neapolitan pizza, made with San Marzano tomatoes, mozzarella cheese, fresh basil, salt, and extra-virgin olive oil.',
       price: '\$26',
-      function: () {},
+      function: () {
+        Navigator.pushNamed(context, '/OrderPizzaMargheritaScreen');
+      },
+
     );
   }
 }

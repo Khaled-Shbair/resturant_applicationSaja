@@ -24,6 +24,7 @@ class OrderMeals extends StatelessWidget {
       appBar: AppBar(
         centerTitle: true,
         elevation: 0,
+        leadingWidth: 90,
         backgroundColor: Colors.transparent,
         leading: IconButton(
           onPressed: () {
@@ -43,7 +44,11 @@ class OrderMeals extends StatelessWidget {
           ),
         ),
         actions: [
-          Image.asset('images/profile.png'),
+          IconButton(
+            onPressed: () {},
+            icon: Image.asset('images/profile.png'),
+            iconSize: 90,
+          ),
         ],
       ),
       body: ListView(

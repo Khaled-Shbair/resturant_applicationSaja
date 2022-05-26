@@ -17,7 +17,9 @@ class _DetailsCheeseBurgerScreenState extends State<DetailsCheeseBurgerScreen> {
       mealName: 'Cheese Burger',
       details: 'Cheeseburgers can include variations in structure, ingredients and composition. As with other hamburgers, a cheeseburger may include toppings such as lettuce, tomato, onion, pickles, bacon, mayonnaise, ketchup, and mustard. In fast food restaurants, the cheese used in cheeseburgers is usually processed cheese.',
       price: '\$25',
-      function: (){},
+      function: (){
+        Navigator.pushNamed(context, '/OrderCheeseBurgerScreen');
+      },
     );
   }
 }
