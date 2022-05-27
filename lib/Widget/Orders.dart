@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'ImageProfile.dart';
 import 'Stars.dart';
 
 class Orders extends StatelessWidget {
@@ -9,7 +9,7 @@ class Orders extends StatelessWidget {
     required this.details,
     required this.price,
     required this.function,
-   // required this.onPressed,
+    // required this.onPressed,
     Key? key,
   }) : super(key: key);
   final String image;
@@ -17,7 +17,6 @@ class Orders extends StatelessWidget {
   final String details;
   final String price;
   final Function() function;
-  //final Function() onPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -29,17 +28,16 @@ class Orders extends StatelessWidget {
         backgroundColor: Colors.white,
         leadingWidth: 90,
         leading: IconButton(
-          onPressed: (){
+          onPressed: () {
             Navigator.pop(context);
           },
-          //onPressed,
           icon: const Icon(
             Icons.arrow_back_ios,
             color: Color(0XFF08063A),
           ),
         ),
-        actions: [
-          Image.asset('images/profile.png'),
+        actions: const [
+          ImageProfile(),
         ],
       ),
       body: Column(

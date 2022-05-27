@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'ImageProfile.dart';
 import 'OrderMethod.dart';
 
 class OrderMeals extends StatelessWidget {
@@ -43,12 +44,8 @@ class OrderMeals extends StatelessWidget {
             fontWeight: FontWeight.w500,
           ),
         ),
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: Image.asset('images/profile.png'),
-            iconSize: 90,
-          ),
+        actions: const [
+          ImageProfile(),
         ],
       ),
       body: ListView(

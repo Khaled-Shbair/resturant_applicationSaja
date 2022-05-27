@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
+import '../../Widget/ImageProfile.dart';
 import '../../Widget/Product Department.dart';
+import '../../Widget/Search.dart';
 
 class DepartmentScreen extends StatefulWidget {
   const DepartmentScreen({Key? key}) : super(key: key);
@@ -35,13 +37,8 @@ class _DepartmentScreenState extends State<DepartmentScreen> {
           ),
         ),
         leadingWidth: 100,
-        actions: [
-          IconButton(
-            onPressed: () {},
-            icon: Image.asset('images/profile.png'),
-            iconSize: 100,
-
-          ),
+        actions: const [
+          ImageProfile(),
         ],
       ),
       body: Padding(
@@ -51,47 +48,7 @@ class _DepartmentScreenState extends State<DepartmentScreen> {
         ),
         child: Column(
           children: [
-            const SizedBox(height: 20),
-            TextField(
-              keyboardType: TextInputType.visiblePassword,
-              obscureText: true,
-              decoration: InputDecoration(
-                contentPadding: const EdgeInsetsDirectional.only(
-                  start: 20,
-                ),
-                fillColor: const Color(0XFFEBEBEB),
-                filled: true,
-                hintText: 'Search',
-                suffixIcon: Container(
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(50),
-                    gradient: const LinearGradient(
-                      begin: AlignmentDirectional.topCenter,
-                      end: AlignmentDirectional.bottomCenter,
-                      colors: [
-                        Color(0XFFFF3D00),
-                        Color(0XFFFF6A0D),
-                      ],
-                    ),
-                  ),
-                  child: IconButton(
-                      icon: const Icon(
-                        Icons.search,
-                        color: Colors.white,
-                      ),
-                      onPressed: () {}),
-                ),
-                hintStyle: const TextStyle(
-                  color: Colors.black12,
-                  fontSize: 18,
-                  fontWeight: FontWeight.w400,
-                ),
-                border: OutlineInputBorder(
-                  borderRadius: BorderRadius.circular(50),
-                  borderSide: BorderSide.none,
-                ),
-              ),
-            ),
+            const Search(),
             Expanded(
               child: GridView(
                 padding: const EdgeInsetsDirectional.only(
@@ -117,7 +74,6 @@ class _DepartmentScreenState extends State<DepartmentScreen> {
                     price: '\$10',
                     function: () {
                       Navigator.pushNamed(context, '/DetailsChickenBurgerScreen');
-
                     },
                   ),
                   Product(
@@ -126,7 +82,6 @@ class _DepartmentScreenState extends State<DepartmentScreen> {
                     price: '\$5',
                     function: () {
                       Navigator.pushNamed(context, '/DetailsChickenBurgerScreen');
-
                     },
                   ),
                   Product(
@@ -135,7 +90,6 @@ class _DepartmentScreenState extends State<DepartmentScreen> {
                     price: '\$20',
                     function: () {
                       Navigator.pushNamed(context, '/DetailsChickenBurgerScreen');
-
                     },
                   ),
                   Product(
@@ -161,3 +115,5 @@ class _DepartmentScreenState extends State<DepartmentScreen> {
     );
   }
 }
+
+
