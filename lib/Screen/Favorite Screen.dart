@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
 import '../Widget/ImageProfile.dart';
+import '../Widget/ProductFavorite.dart';
 import '../Widget/Search.dart';
-import '../Widget/Stars.dart';
 
 class FavoriteScreen extends StatefulWidget {
   const FavoriteScreen({Key? key}) : super(key: key);
@@ -15,6 +15,7 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         centerTitle: true,
         elevation: 0,
@@ -46,34 +47,28 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
           start: 37,
           end: 37,
         ),
-        children: [
-          Card(
-            margin: EdgeInsetsDirectional.only(start: 35, end: 35),
-            child: ListTile(
-              leading: Image.asset('images/beef burger big.png'),
-              title: Column(
-                children: [
-                  const Text('Beef Burger'),
-                  Row(
-                    children: const [
-                      Stars(),
-                      Stars(),
-                      Stars(),
-                      Stars(),
-                      Stars(),
-                      Stars(),
-                    ],
-                  ),
-                ],
-              ),
-              trailing: IconButton(
-                onPressed: () {},
-                icon: const Icon(
-                  Icons.delete,
-                  color: Color(0XFFFF3D00),
-                ),
-              ),
-            ),
+        children: const [
+          Search(),
+          SizedBox(height: 50),
+          ProductFavorite(
+            image: 'images/chicken burgerBig.png',
+            nameMeal: 'Chicken Burger',
+          ),
+          ProductFavorite(
+            image: 'images/beef burger big.png',
+            nameMeal: 'Beef Burger',
+          ),
+          ProductFavorite(
+            image: 'images/italian pizza big.png',
+            nameMeal: 'Italian Pizza',
+          ),
+          ProductFavorite(
+            image: 'images/cheese pizza big.png',
+            nameMeal: 'Cheese Pizza',
+          ),
+          ProductFavorite(
+            image: 'images/cheese burger big.png',
+            nameMeal: 'Cheese Burger',
           ),
         ],
       ),
