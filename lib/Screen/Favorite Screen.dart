@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../Widget/ImageProfile.dart';
 import '../Widget/Search.dart';
+import '../Widget/Stars.dart';
+
 class FavoriteScreen extends StatefulWidget {
   const FavoriteScreen({Key? key}) : super(key: key);
 
@@ -34,7 +36,7 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
             fontWeight: FontWeight.w500,
           ),
         ),
-        leadingWidth: 100,
+        leadingWidth: 90,
         actions: const [
           ImageProfile(),
         ],
@@ -44,8 +46,35 @@ class _FavoriteScreenState extends State<FavoriteScreen> {
           start: 37,
           end: 37,
         ),
-        children: const [
-          Search(),
+        children: [
+          Card(
+            margin: EdgeInsetsDirectional.only(start: 35, end: 35),
+            child: ListTile(
+              leading: Image.asset('images/beef burger big.png'),
+              title: Column(
+                children: [
+                  const Text('Beef Burger'),
+                  Row(
+                    children: const [
+                      Stars(),
+                      Stars(),
+                      Stars(),
+                      Stars(),
+                      Stars(),
+                      Stars(),
+                    ],
+                  ),
+                ],
+              ),
+              trailing: IconButton(
+                onPressed: () {},
+                icon: const Icon(
+                  Icons.delete,
+                  color: Color(0XFFFF3D00),
+                ),
+              ),
+            ),
+          ),
         ],
       ),
     );

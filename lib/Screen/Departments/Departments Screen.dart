@@ -65,7 +65,8 @@ class _DepartmentScreenState extends State<DepartmentScreen> {
                     title: 'Chicken Burger',
                     price: '\$15',
                     function: () {
-                      Navigator.pushNamed(context, '/DetailsChickenBurgerScreen');
+                      Navigator.pushNamed(
+                          context, '/DetailsChickenBurgerScreen');
                     },
                   ),
                   Product(
@@ -73,7 +74,8 @@ class _DepartmentScreenState extends State<DepartmentScreen> {
                     title: 'Beef  Burger',
                     price: '\$10',
                     function: () {
-                      Navigator.pushNamed(context, '/DetailsChickenBurgerScreen');
+                      Navigator.pushNamed(
+                          context, '/DetailsChickenBurgerScreen');
                     },
                   ),
                   Product(
@@ -81,7 +83,8 @@ class _DepartmentScreenState extends State<DepartmentScreen> {
                     title: 'Italian Pizza',
                     price: '\$5',
                     function: () {
-                      Navigator.pushNamed(context, '/DetailsChickenBurgerScreen');
+                      Navigator.pushNamed(
+                          context, '/DetailsChickenBurgerScreen');
                     },
                   ),
                   Product(
@@ -89,7 +92,8 @@ class _DepartmentScreenState extends State<DepartmentScreen> {
                     title: 'Cheese Pizza',
                     price: '\$20',
                     function: () {
-                      Navigator.pushNamed(context, '/DetailsChickenBurgerScreen');
+                      Navigator.pushNamed(
+                          context, '/DetailsChickenBurgerScreen');
                     },
                   ),
                   Product(
@@ -97,7 +101,8 @@ class _DepartmentScreenState extends State<DepartmentScreen> {
                     title: 'Cheese Burger',
                     price: '\$25',
                     function: () {
-                      Navigator.pushNamed(context, '/DetailsChickenBurgerScreen');
+                      Navigator.pushNamed(
+                          context, '/DetailsChickenBurgerScreen');
                     },
                   ),
                   Product(
@@ -115,5 +120,3 @@ class _DepartmentScreenState extends State<DepartmentScreen> {
     );
   }
 }
-
-
